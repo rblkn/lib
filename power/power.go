@@ -7,6 +7,6 @@ import (
 )
 
 // Pow returns base^exponent. It is a generic function that can be used with
-func Pow[T constraints.Float](base, exponent T) float64 {
+func Pow[T constraints.Float | constraints.Signed](base, exponent T) float64 {
 	return math.Pow(float64(base), float64(exponent))
 }
