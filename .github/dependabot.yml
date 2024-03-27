@@ -11,10 +11,6 @@ updates:
     open-pull-requests-limit: 2
     pull-request-branch-name:
       separator: "-"
-    groups:
-      dependencies:
-        patterns:
-          - "*"
     labels:
       - ":hamster: Go"
       - ":shamrock: Dependencies"
