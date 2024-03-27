@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/calc/"
+    schedule:
+      interval: "daily"
+      # check for updates at 9am UTC on Monday
+      time: "09:00"
+    target-branch: "main"
+    # To disable automatic updates for gomod dependencies, set value to zero
+    open-pull-requests-limit: 2
+    pull-request-branch-name:
+      separator: "-"
+    groups:
+      dependencies:
+        patterns:
+          - "*"
+    labels:
+      - ":hamster: Go"
+      - ":shamrock: Dependencies"
